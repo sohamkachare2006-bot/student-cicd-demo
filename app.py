@@ -1,13 +1,13 @@
-def predict_result(marks):
-    if marks >= 40:
-        return "PASS"
+def predict_performance(study_hours, attendance, assignment_score):
+    score = (
+        study_hours * 5
+        + attendance * 0.3
+        + assignment_score * 0.4
+    )
+
+    if score >= 80:
+        return "EXCELLENT"
+    elif score >= 60:
+        return "GOOD"
     else:
-        return "FAIL"
-
-
-if __name__ == "__main__":
-    marks = 75
-    result = predict_result(marks)
-
-    print("Student Marks:", marks)
-    print("Predicted Result:", result)
+        return "NEEDS IMPROVEMENT"
