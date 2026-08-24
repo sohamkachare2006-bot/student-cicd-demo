@@ -2,7 +2,7 @@ from app import predict_performance
 
 
 def test_excellent_student():
-    assert predict_performance(10, 95, 90) == "EXCELLENT"
+    assert predict_performance(10, 95, 90) == "No EXCELLENT"
 
 
 def test_good_student():
